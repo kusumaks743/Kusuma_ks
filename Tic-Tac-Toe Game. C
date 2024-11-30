@@ -1,0 +1,55 @@
+#include <stdio.h>
+#inaclude<stdbool.h>
+int main(){
+    char board[3][3];
+    int row,col,moves=0;
+    char current_symbol='X';
+    bool game_over=false;
+    for(int i=0;i<3;i++){
+        board[i][j]=`-`;
+    }
+}
+while(!game_over){
+    printf("\nCurrent Board:\n");
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            printf("%c",board[i][j]);
+            if(j<2)printf("|");
+        }
+        printf("\n");
+        if(i<2)printf("---|---|---\n");
+    }
+    printf("\nPlayer%c,enter your mive (row and column:0-2):",current_symbol);
+    scanf(%d%d,&row,&col);
+    if(row>=0&&row<3&&col>=0&&col<3&& ((board[row][col]==`-`){
+      board[row][col]=current_symbol;
+      moves++;
+      for(int i=0;i<3;i++){
+       if (board[i][0]current_symbol&&board[i][1]
+        ==current_symbol&&board[i][2]==current_symbol)||
+    
+(board[0][i]current_symbol&&board[1][i]
+        ==current_symbol&&board[2][i]==current_symbol))||
+    game_over=true;
+      }
+    }
+    if (board[0][0]current_symbol&&board[1][1]
+        ==current_symbol&&board[2][2]==current_symbol)||
+    
+(board[0][2]current_symbol&&board[1][1]
+        ==current_symbol&&board[2][0]==current_symbol))||
+    game_over=true;
+      }
+      if(game_over){
+        printf("\nPlayer %c wins!\n",current_symbol);
+        break;}
+        if(moves==9){
+          printf("\nit`s a draw!\n");
+          break;
+        }
+        current_symbol=(current _symbol ==`X`)?`0`:`X`;
+        }else{
+         printf("\nInvalid move!Try again.\n");
+        }
+        }
+        }
